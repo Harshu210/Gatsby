@@ -1,0 +1,12 @@
+docker ps -> to list the running containers
+docker image ls -> 
+
+
+
+image, image while running is called as container. 
+
+
+docker pull postgres -> to download the image to our system
+
+$ docker run -d --name postgres-testing -e POSTGRES_PASSWORD=pavan POSTGRES_DB=postgres POSTGRES_USERNAME=root postgres
+
