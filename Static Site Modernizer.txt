@@ -1,0 +1,362 @@
+Requirement: 
+
+Transform static website into a modern, dynamic and content-flexible website (which can change content n number of times)
+
+Proposed Solution:
+
+1)A CMS can be integrated for dynamic content management 
+
+
+
+
+
+Recommended - Payload
+
+
+
+Reasons for Payload CMS:
+
+
+
+
+
+100% open source
+
+
+
+Modern Tech Stack (Integrates easily with frameworks like react)
+
+
+
+Easy for Non-Technical users to manage content( like add/edit/delete content)
+
+
+
+Includes plugins, themes
+
+
+
+Auto-generates REST and GraphQL APIs - no extra setup needed
+
+
+
+Performs better even for high-demand applications
+
+
+
+Easy to customize schema, logic and behavior entirely through code
+
+
+
+SEO-friendly
+
+Other Alternatives - 
+
+
+
+
+
+Strapi
+
+
+
+
+
+Open source
+
+
+
+Quick setup with some customization
+
+
+
+More beginner friendly
+
+
+
+GUI for schema creation
+
+
+
+Easy for non-tech
+
+Why not Stapi
+
+
+
+
+
+less flexible for custom backend logic
+
+
+
+struggles with high traffic and complex data relationships at scale
+
+
+
+lacks full customization - requires third-party plugins for advanced features
+
+
+
+complex for deep integrations 
+
+
+
+Sanity
+
+
+
+
+
+Great for structured content and collaboration
+
+
+
+Strong React integration
+
+
+
+Real-Time Collaboration (Multiple users can edit content simultaneously)
+
+
+
+Powerful Querying (Uses GROQ for advanced content querying and filtering)
+
+Why not Sanity
+
+
+
+Difficult for non-tech users
+
+
+
+complex schema(since GROQ is needed)
+
+
+
+free tier is limited (costs can grow with usage)
+
+
+
+external hosting required
+
+
+
+WordPress
+
+
+
+
+
+easy for non-tech users
+
+
+
+large plugin ecosystem
+
+
+
+quick setup
+
+
+
+SEO-friendly
+
+Why not WordPress
+
+
+
+can be slow(if too many plugins used)
+
+
+
+security risks
+
+
+
+not ideal for complex projects
+
+
+
+outdated tech(PHP,MYSQL)
+
+
+
+difficult to customize deeply without using plugins
+
+2) Static website Generator 
+
+
+
+
+
+Recommended - Gatsby
+
+
+
+Reasons for Gatsby
+
+
+
+
+
+open source
+
+
+
+uses React to build fast, SEO-friendly websites.
+
+
+
+pulls data from various sources (like CMSs, APIs, or markdown files) using GraphQL, a powerful query language that lets you request exactly the data you need. 
+
+
+
+Gatsby then pre-builds all pages at build time into static files. 
+
+
+
+This results in fast loading, optimized images, and strong security, since there's no server-side processing needed after deployment.
+
+Other Alternatives:
+
+
+
+
+
+Hugo
+
+
+
+
+
+A fast static site generator built with Go
+
+
+
+simple setup
+
+
+
+ideal for blogs and documentation sites.
+
+
+
+open source
+
+Why not Hugo
+
+
+
+
+
+Hugo has fewer plugins and integrations
+
+
+
+Hugo is static-first, so handling dynamic content requires extra effort - which is a big drawback
+
+
+
+Jekyll
+
+
+
+
+
+Ruby-based 
+
+
+
+ integrates well with GitHub Pages
+
+
+
+commonly used for blogs and personal websites.
+
+Why not Jekyll
+
+
+
+
+
+slow with large sites
+
+
+
+no built-in content management interface( difficult for non-tech)
+
+
+
+requires rebuilding the site whenever content changes
+
+
+
+less suitable for larger, dynamic websites or apps with complex requirements
+
+
+
+Docker Commands for Running a PostgreSQL Container
+
+
+
+
+
+docker ps Lists all running Docker containers.
+
+
+
+docker ps -a Lists all containers, including stopped ones.
+
+
+
+docker run --name postgres-testing -e POSTGRES_PASSWORD=password -e POSTGRES_USER=username -e POSTGRES_DB=postgres -p 5432:5432 -d postgres 
+
+Runs a new PostgreSQL container named postgres-testing with custom user, password, and DB, exposing port 5432
+
+
+
+Running Payload CMS with PostgreSQL Locally
+
+
+
+
+
+npx create-payload-app Creates a new Payload CMS project
+
+
+
+postgres://username:password@127.0.0.1:5432/postgres A PostgreSQL connection string specifying user postgres, password password, host 127.0.0.1, port 5432, and database postgres
+
+
+
+cd ./file_name Changes the directory to newly created Payload CMS project folder
+
+
+
+npm run dev Starts development server for Payload CMS app.
+
+
+
+Connecting Gatsby + Payload CMS (using Apollo Client)
+
+
+
+
+
+npm install @apollo/client graphql
+
+ 
+
+
+
+
+
+Successfully integrated Gatsby and Payload CMS
+
+
+
+Content, including text and media blocks, is being successfully retrieved from Payload CMS and integrated into Gatsby.
+
+
+
